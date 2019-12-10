@@ -18,9 +18,10 @@ public class UserDaoImpl implements UserDao {
         connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/java2019?serverTimezone=UTC",//数据库连接字符串
                 "root",
-                "980925"); //写你自己的账号和密码
+                "971214"); //写你自己的账号和密码
 
         statement = connection.createStatement();
+        /*statement.executeUpdate(sql);*/
     }
 
 
@@ -36,7 +37,7 @@ public class UserDaoImpl implements UserDao {
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/java2019?serverTimezone=UTC",//数据库连接字符串
                     "root",
-                    "980925"); //写你自己的账号和密码
+                    "971214"); //写你自己的账号和密码
 
             statement = connection.createStatement();
             statement.executeUpdate(sql);
@@ -63,7 +64,7 @@ public class UserDaoImpl implements UserDao {
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/java2019?serverTimezone=UTC",//数据库连接字符串
                     "root",
-                    "980925"); //写你自己的账号和密码
+                    "971214"); //写你自己的账号和密码
 
             statement = connection.createStatement();
             statement.executeUpdate(sql);
@@ -87,15 +88,13 @@ public class UserDaoImpl implements UserDao {
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
-
         String sql = "select * from t_users";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/java2019?serverTimezone=UTC",//数据库连接字符串
                     "root",
-                    "980925"); //写你自己的账号和密码
-
+                    "971214"); //写你自己的账号和密码
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
 
@@ -107,17 +106,15 @@ public class UserDaoImpl implements UserDao {
                 User user = new User(id, username, password);
 
                 /*System.out.println(id+"-"+username+"-" +password);*/
+
                 userList.add(user);
             }
         }catch (Exception e){
 
         }finally {
-
         }
-
-
-
 
         return userList;
     }
 }
+

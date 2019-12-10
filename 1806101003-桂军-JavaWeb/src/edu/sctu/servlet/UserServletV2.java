@@ -29,6 +29,6 @@ public class UserServletV2 extends HelloServlet {
 
         req.setAttribute("userList",userList);
         //跳转
-        req.getRequestDispatcher("test06.jsp").forward(req,resp);
+        req.getRequestDispatcher("test08.jsp").forward(req,resp);
     }
 }

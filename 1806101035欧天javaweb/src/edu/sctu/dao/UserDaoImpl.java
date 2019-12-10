@@ -21,7 +21,7 @@ public class UserDaoImpl implements UserDao {
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/java2019?serverTimezone=UTC&characterEncoding=UTF-8",
                     "root",
-                    "123456"//写自己的名字
+                    "980925"//写自己的名字
             );
             statement=connection.createStatement();
             statement.executeUpdate(sql);
