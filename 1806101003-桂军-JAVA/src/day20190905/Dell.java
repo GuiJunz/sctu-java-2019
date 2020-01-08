@@ -17,8 +17,6 @@ public class Dell {
         dell.ab="轻薄本";
         dell.big="15.6寸";
         dell.printInfo();
-
-
     }
 
 }
